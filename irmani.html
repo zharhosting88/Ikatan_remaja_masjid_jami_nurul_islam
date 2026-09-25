@@ -1,0 +1,2380 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+
+  <!-- ================= SEO ================= -->
+  <title>IRMANI | Ikatan Remaja Masjid jami nurul islam</title>
+
+  <meta name="description"
+        content="Website resmi IRMANI, wadah pemuda dan remaja masjid untuk berdakwah, berkarya, bersosial, dan membangun generasi Islami yang aktif dan inspiratif.">
+
+  <meta name="keywords"
+        content="IRMANI, remaja masjid, organisasi Islam, pemuda masjid, kegiatan masjid, kajian Islam, dakwah">
+
+  <meta name="author" content="IRMANI">
+
+  <meta name="robots" content="index, follow">
+  <meta name="googlebot" content="index, follow">
+
+  <meta name="theme-color" content="#087443">
+
+  <!-- Mobile -->
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://domainkamu.com/">
+
+  <!-- ================= OPEN GRAPH ================= -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="IRMANI | Ikatan Remaja Masjid jami nurul islam">
+  <meta property="og:description"
+        content="Bersama membangun generasi muda yang Islami, aktif, kreatif, dan bermanfaat.">
+
+  <meta property="og:image"
+        content="https://i.imgur.com/bAQcAMa.jpeg">
+
+  <meta property="og:url"
+        content="https://domainkamu.com/">
+
+  <meta property="og:site_name" content="IRMANI">
+
+  <!-- ================= TWITTER ================= -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="IRMANI | Ikatan Remaja Masjid">
+  <meta name="twitter:description"
+        content="Wadah pemuda dan remaja masjid untuk berdakwah, berkarya, dan bersosial.">
+
+  <meta name="twitter:image"
+        content="https://i.imgur.com/bAQcAMa.jpeg">
+
+  <!-- ================= FAVICON ================= -->
+  <link rel="icon"
+        href="https://i.imgur.com/bAQcAMa.jpeg">
+
+  <!-- ================= FONT ================= -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+  <!-- ================= FONT AWESOME ================= -->
+  <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+
+    /* ================= RESET ================= */
+
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      scroll-behavior:smooth;
+    }
+
+    :root{
+      --green:#1b57c1;
+      --green-dark:#1b57c1;
+      --green-light:#3573e0;
+      --lime:#dff8e9;
+      --white:#ffffff;
+      --black:#102019;
+      --gray:#65756c;
+      --bg:#f6fbf8;
+      --border:#dcece3;
+      --shadow:0 15px 45px rgba(0,80,45,.10);
+    }
+
+    body{
+      font-family:"Inter",sans-serif;
+      background:var(--bg);
+      color:var(--black);
+      overflow-x:hidden;
+    }
+
+    a{
+      text-decoration:none;
+      color:inherit;
+    }
+
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .container{
+      width:min(1150px,92%);
+      margin:auto;
+    }
+
+    /* ================= LOADING ================= */
+
+    #loader{
+      position:fixed;
+      inset:0;
+      background:#1b57c1;
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      z-index:99999;
+      transition:.7s;
+    }
+
+    .loader-box{
+      text-align:center;
+      color:white;
+    }
+
+    .loader-logo{
+      width:70px;
+      height:70px;
+      border:3px solid rgba(255,255,255,.3);
+      border-top-color:white;
+      border-radius:50%;
+      animation:spin 1s linear infinite;
+      margin:auto;
+    }
+
+    .loader-box p{
+      margin-top:18px;
+      font-weight:600;
+      letter-spacing:2px;
+    }
+
+    @keyframes spin{
+      to{transform:rotate(360deg)}
+    }
+
+    /* ================= NAVBAR ================= */
+
+    header{
+      position:fixed;
+      width:100%;
+      top:0;
+      z-index:1000;
+      padding:18px 0;
+      transition:.4s;
+    }
+
+    header.scrolled{
+      background:rgba(255,255,255,.88);
+      backdrop-filter:blur(18px);
+      box-shadow:0 5px 30px rgba(0,0,0,.08);
+      padding:12px 0;
+    }
+
+    nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .logo{
+      display:flex;
+      align-items:center;
+      gap:10px;
+      font-family:"Poppins",sans-serif;
+      font-size:23px;
+      font-weight:800;
+      color:white;
+    }
+
+    header.scrolled .logo{
+      color:#1b57c1;
+    }
+
+    .logo-icon{
+      width:42px;
+      height:42px;
+      border-radius:14px;
+      background:white;
+      color:#1b57c1;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      box-shadow:0 8px 25px rgba(0,0,0,.15);
+    }
+
+    .logo-icon img{
+  width:100%;
+  height:100%;
+  object-fit:contain;
+  border-radius:12px;
+    }
+
+    .nav-links{
+      display:flex;
+      align-items:center;
+      gap:28px;
+      color:white;
+      font-weight:600;
+      font-size:14px;
+    }
+
+    header.scrolled .nav-links{
+      color:var(--black);
+    }
+
+    .nav-links a{
+      position:relative;
+    }
+
+    .nav-links a::after{
+      content:"";
+      position:absolute;
+      bottom:-7px;
+      left:0;
+      width:0;
+      height:2px;
+      background:currentColor;
+      transition:.3s;
+    }
+
+    .nav-links a:hover::after{
+      width:100%;
+    }
+
+    .menu-btn{
+      display:none;
+      color:white;
+      font-size:23px;
+      cursor:pointer;
+    }
+
+    header.scrolled .menu-btn{
+      color:#1b57c1;
+    }
+
+    /* ================= HERO ================= */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      position:relative;
+      overflow:hidden;
+      color:white;
+      background:
+      linear-gradient(110deg,rgba(5,35,100,.95),rgba(20,100,210,.72)),
+      url("https://images.unsplash.com/photo-1542816417-0983c9c9ad53?auto=format&fit=crop&w=1800&q=85")
+      center/cover;
+    }
+
+    .hero::before{
+      content:"";
+      position:absolute;
+      width:500px;
+      height:500px;
+      background:rgba(255,255,255,.07);
+      border-radius:50%;
+      right:-180px;
+      top:-150px;
+      animation:float 6s ease-in-out infinite;
+    }
+
+    .hero::after{
+      content:"";
+      position:absolute;
+      width:350px;
+      height:350px;
+      border:1px solid rgba(255,255,255,.13);
+      border-radius:50%;
+      left:-120px;
+      bottom:-100px;
+    }
+
+    .hero-content{
+      position:relative;
+      z-index:2;
+      max-width:760px;
+      padding-top:70px;
+    }
+
+    .hero-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      background:rgba(255,255,255,.12);
+      border:1px solid rgba(255,255,255,.2);
+      padding:9px 16px;
+      border-radius:50px;
+      backdrop-filter:blur(10px);
+      font-size:13px;
+      margin-bottom:22px;
+      animation:fadeUp .8s ease;
+    }
+
+    .hero h1{
+      font-family:"Poppins",sans-serif;
+      font-size:clamp(46px,8vw,88px);
+      line-height:1;
+      margin-bottom:18px;
+      letter-spacing:-3px;
+      animation:fadeUp 1s ease;
+    }
+
+    .hero h1 span{
+      color:#1b57c1;
+    }
+
+    .hero p{
+      max-width:650px;
+      color:#ffffff;
+      font-size:17px;
+      line-height:1.8;
+      animation:fadeUp 1.2s ease;
+    }
+
+    .hero-buttons{
+      display:flex;
+      gap:12px;
+      margin-top:32px;
+      flex-wrap:wrap;
+      animation:fadeUp 1.4s ease;
+    }
+
+    .btn{
+      padding:14px 21px;
+      border-radius:14px;
+      font-weight:700;
+      display:inline-flex;
+      align-items:center;
+      gap:9px;
+      transition:.3s;
+    }
+
+    .btn-primary{
+      background:white;
+      color:var(--green);
+    }
+
+    .btn-primary:hover{
+      transform:translateY(-4px);
+      box-shadow:0 12px 30px rgba(0,0,0,.2);
+    }
+
+    .btn-outline{
+      border:1px solid rgba(255,255,255,.4);
+      color:white;
+      background:rgba(255,255,255,.08);
+      backdrop-filter:blur(10px);
+    }
+
+    .btn-outline:hover{
+      background:white;
+      color:var(--green);
+      transform:translateY(-4px);
+    }
+
+    .scroll-down{
+      position:absolute;
+      bottom:30px;
+      left:50%;
+      transform:translateX(-50%);
+      font-size:12px;
+      opacity:.7;
+      display:flex;
+      flex-direction:column;
+      align-items:center;
+      gap:7px;
+      animation:bounce 2s infinite;
+    }
+
+    /* ================= SECTION ================= */
+
+    section{
+      padding:100px 0;
+    }
+
+    .section-head{
+      text-align:center;
+      max-width:680px;
+      margin:0 auto 55px;
+    }
+
+    .section-label{
+      display:inline-block;
+      color:#1b57c1;
+      font-weight:800;
+      font-size:13px;
+      text-transform:uppercase;
+      letter-spacing:2px;
+      margin-bottom:10px;
+    }
+
+    .section-head h2{
+      font-family:"Poppins",sans-serif;
+      font-size:clamp(30px,5vw,45px);
+      line-height:1.2;
+      margin-bottom:15px;
+    }
+
+    .section-head p{
+      color:var(--gray);
+      line-height:1.8;
+    }
+
+    /* ================= ABOUT ================= */
+
+    .about-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:60px;
+      align-items:center;
+    }
+
+    .about-image{
+      position:relative;
+    }
+
+    .about-image img{
+      width:100%;
+      height:480px;
+      object-fit:cover;
+      border-radius:30px;
+      box-shadow:var(--shadow);
+    }
+
+    .about-floating{
+      position:absolute;
+      right:-20px;
+      bottom:25px;
+      background:white;
+      padding:20px;
+      border-radius:20px;
+      box-shadow:var(--shadow);
+      display:flex;
+      gap:13px;
+      align-items:center;
+    }
+
+    .about-floating i{
+      width:45px;
+      height:45px;
+      border-radius:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#1b57c1;
+      color:#1b57c1;
+    }
+
+    .about-text h3{
+      font-family:"Poppins",sans-serif;
+      font-size:30px;
+      margin-bottom:15px;
+    }
+
+    .about-text > p{
+      color:var(--gray);
+      line-height:1.8;
+      margin-bottom:22px;
+    }
+
+    .vision-box{
+      display:grid;
+      gap:12px;
+    }
+
+    .vision-item{
+      padding:18px;
+      border:1px solid var(--border);
+      border-radius:18px;
+      background:white;
+      transition:.3s;
+    }
+
+    .vision-item:hover{
+      transform:translateX(6px);
+      border-color:#1b57c1;
+    }
+
+    .vision-item h4{
+      color:#1b57c1;
+      margin-bottom:6px;
+    }
+
+    .vision-item p{
+      font-size:14px;
+      color:var(--gray);
+      line-height:1.6;
+    }
+
+    /* ================= MANAGEMENT ================= */
+
+    .management{
+      background:#e1e5f4;
+    }
+
+    .management-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
+    }
+
+    .member-card{
+      background:white;
+      border:1px solid var(--border);
+      padding:25px 18px;
+      border-radius:24px;
+      text-align:center;
+      transition:.4s;
+      position:relative;
+      overflow:hidden;
+    }
+
+    .member-card::before{
+      content:"";
+      position:absolute;
+      width:100%;
+      height:4px;
+      background:#1b57c1;
+      left:0;
+      top:0;
+      transform:scaleX(0);
+      transition:.4s;
+    }
+
+    .member-card:hover{
+      transform:translateY(-9px);
+      box-shadow:var(--shadow);
+    }
+
+    .member-card:hover::before{
+      transform:scaleX(1);
+    }
+
+    .member-photo{
+      width:90px;
+      height:90px;
+      border-radius:50%;
+      object-fit:cover;
+      margin:0 auto 15px;
+      border:5px solid #1b57c1;
+    }
+
+    .member-card h3{
+      font-family:"Poppins",sans-serif;
+      font-size:17px;
+    }
+
+    .member-card span{
+      display:block;
+      color:#474ee2;
+      font-size:13px;
+      font-weight:700;
+      margin-top:5px;
+    }
+
+    .member-card p{
+      font-size:12px;
+      color:var(--gray);
+      margin-top:10px;
+      line-height:1.5;
+    }
+
+    /* ================= TIMELINE ================= */
+
+    .timeline{
+      max-width:800px;
+      margin:auto;
+      position:relative;
+    }
+
+    .timeline::before{
+      content:"";
+      position:absolute;
+      left:50%;
+      transform:translateX(-50%);
+      width:2px;
+      height:100%;
+      background:#1b57c1;
+    }
+
+    .timeline-item{
+      width:50%;
+      padding:15px 35px;
+      position:relative;
+    }
+
+    .timeline-item:nth-child(odd){
+      left:0;
+      text-align:right;
+    }
+
+    .timeline-item:nth-child(even){
+      left:50%;
+    }
+
+    .timeline-dot{
+      position:absolute;
+      width:15px;
+      height:15px;
+      border-radius:50%;
+      background:var(--green);
+      border:4px solid white;
+      box-shadow:0 0 0 4px #4c82e3;
+      top:25px;
+    }
+
+    .timeline-item:nth-child(odd) .timeline-dot{
+      right:-8px;
+    }
+
+    .timeline-item:nth-child(even) .timeline-dot{
+      left:-7px;
+    }
+
+    .timeline-card{
+      background:white;
+      border:1px solid var(--border);
+      border-radius:20px;
+      padding:22px;
+      box-shadow:0 8px 25px rgba(0,70,40,.05);
+      transition:.3s;
+    }
+
+    .timeline-card:hover{
+      transform:scale(1.03);
+      box-shadow:var(--shadow);
+    }
+
+    .timeline-card i{
+      color:#1b57c1;
+      font-size:22px;
+      margin-bottom:10px;
+    }
+
+    .timeline-card h3{
+      font-family:"Poppins",sans-serif;
+      font-size:17px;
+      margin-bottom:7px;
+    }
+
+    .timeline-card p{
+      color:var(--gray);
+      font-size:13px;
+      line-height:1.6;
+    }
+
+    /* ================= GALLERY ================= */
+
+    .gallery{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:25px;
+    }
+
+    .gallery-item{
+      height:240px;
+      overflow:hidden;
+      border-radius:20px;
+      position:relative;
+      cursor:pointer;
+    }
+
+    .gallery-item:first-child{
+      grid-column:span 2;
+      grid-row:span 2;
+      height:auto;
+    }
+
+    .gallery-item img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:.6s;
+    }
+
+    .gallery-item:hover img{
+      transform:scale(1.1);
+    }
+
+    .gallery-overlay{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:flex-end;
+      padding:20px;
+      background:linear-gradient(transparent,rgba(4,37,83,0.75));
+      color:white;
+      opacity:0;
+      transition:.3s;
+    }
+
+    .gallery-item:hover .gallery-overlay{
+      opacity:1;
+    }
+
+    /* ================= ARTICLES ================= */
+
+    .article-grid{
+      display:grid;
+      grid-template-columns:repeat(3,1fr);
+      gap:22px;
+    }
+
+    .article-card{
+      background:white;
+      border:1px solid var(--border);
+      border-radius:24px;
+      overflow:hidden;
+      transition:.4s;
+    }
+
+    .article-card:hover{
+      transform:translateY(-8px);
+      box-shadow:var(--shadow);
+    }
+
+    .article-image{
+      height:210px;
+      overflow:hidden;
+    }
+
+    .article-image img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      transition:.5s;
+    }
+
+    .article-card:hover .article-image img{
+      transform:scale(1.07);
+    }
+
+    .article-content{
+      padding:23px;
+    }
+
+    .article-tag{
+      display:inline-block;
+      padding:6px 10px;
+      border-radius:8px;
+      background:#5087e9;
+      color:#ffffff;
+      font-size:11px;
+      font-weight:800;
+      margin-bottom:12px;
+    }
+
+    .article-content h3{
+      font-family:"Poppins",sans-serif;
+      font-size:18px;
+      margin-bottom:10px;
+    }
+
+    .article-content p{
+      color:var(--gray);
+      font-size:13px;
+      line-height:1.7;
+    }
+
+    .read-more{
+      display:inline-flex;
+      gap:7px;
+      align-items:center;
+      color:#1b57c1;
+      font-size:13px;
+      font-weight:800;
+      margin-top:16px;
+    }
+
+    /* ================= CONTACT ================= */
+
+    .contact{
+      background:linear-gradient(135deg,#0c59b4,#1b57c1);
+      color:white;
+    }
+
+    .contact .section-label{
+      color:#f1f5fc;
+    }
+
+    .contact .section-head p{
+      color:#ebf0f9;
+    }
+
+    .contact-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:30px;
+    }
+
+    .contact-box{
+      background:rgba(255,255,255,.09);
+      border:1px solid rgba(255,255,255,.16);
+      border-radius:25px;
+      padding:28px;
+      backdrop-filter:blur(15px);
+    }
+
+    .contact-item{
+      display:flex;
+      align-items:center;
+      gap:15px;
+      padding:15px 0;
+      border-bottom:1px solid rgba(255,255,255,.1);
+    }
+
+    .contact-item:last-child{
+      border-bottom:0;
+    }
+
+    .contact-icon{
+      width:45px;
+      height:45px;
+      flex-shrink:0;
+      border-radius:14px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:rgba(255,255,255,.12);
+      color:#eff3fb;
+      font-size:18px;
+    }
+
+    .contact-item small{
+      display:block;
+      color:#eef2f9;
+      font-size:11px;
+      margin-bottom:3px;
+    }
+
+    .contact-item strong{
+      font-size:14px;
+    }
+
+    .map-box{
+      min-height:390px;
+      border-radius:25px;
+      overflow:hidden;
+      border:1px solid rgba(255,255,255,.15);
+      background:#1b57c1;
+    }
+
+    .map-box iframe{
+      width:100%;
+      height:100%;
+      min-height:390px;
+      border:0;
+    }
+
+    /* ================= FOOTER ================= */
+
+    footer{
+      background:#1b57c1;
+      color:#e7edf8;
+      padding:35px 0;
+    }
+
+    .footer-content{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:20px;
+    }
+
+    .footer-logo{
+      color:white;
+      font-family:"Poppins",sans-serif;
+      font-size:21px;
+      font-weight:800;
+    }
+
+    .socials{
+      display:flex;
+      gap:10px;
+    }
+
+    .socials a{
+      width:40px;
+      height:40px;
+      border-radius:12px;
+      background:rgba(255,255,255,.08);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      transition:.3s;
+    }
+
+    .socials a:hover{
+      background:var(--green-light);
+      transform:translateY(-4px);
+      color:white;
+    }
+
+    /* ================= ANIMATION ================= */
+
+    .reveal{
+      opacity:0;
+      transform:translateY(35px);
+      transition:1s ease;
+    }
+
+    .reveal.active{
+      opacity:1;
+      transform:translateY(0);
+    }
+
+    @keyframes fadeUp{
+      from{
+        opacity:0;
+        transform:translateY(25px);
+      }
+      to{
+        opacity:1;
+        transform:translateY(0);
+      }
+    }
+
+    @keyframes float{
+      0%,100%{transform:translateY(0)}
+      50%{transform:translateY(25px)}
+    }
+
+    @keyframes bounce{
+      0%,100%{transform:translate(-50%,0)}
+      50%{transform:translate(-50%,8px)}
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media(max-width:900px){
+
+      .nav-links{
+        position:absolute;
+        top:75px;
+        left:4%;
+        width:92%;
+        padding:20px;
+        background:white;
+        border-radius:20px;
+        box-shadow:var(--shadow);
+        display:none;
+        flex-direction:column;
+        align-items:flex-start;
+        color:var(--black) !important;
+      }
+
+      .nav-links.show{
+        display:flex;
+      }
+
+      .menu-btn{
+        display:block;
+      }
+
+      .management-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .gallery{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+      .gallery-item:first-child{
+        grid-column:span 2;
+      }
+
+      .article-grid{
+        grid-template-columns:1fr 1fr;
+      }
+
+      .about-grid{
+        gap:35px;
+      }
+    }
+
+    @media(max-width:650px){
+
+      section{
+        padding:75px 0;
+      }
+
+      .hero h1{
+        letter-spacing:-2px;
+      }
+
+      .hero p{
+        font-size:15px;
+      }
+
+      .hero-buttons{
+        flex-direction:column;
+        align-items:stretch;
+      }
+
+      .btn{
+        justify-content:center;
+      }
+
+      .about-grid,
+      .contact-grid,
+      .article-grid{
+        grid-template-columns:1fr;
+      }
+
+      .about-image img{
+        height:350px;
+      }
+
+      .about-floating{
+        right:10px;
+        bottom:15px;
+      }
+
+      .management-grid{
+        grid-template-columns:1fr 1fr;
+        gap:12px;
+      }
+
+      .member-card{
+        padding:20px 10px;
+      }
+
+      .timeline::before{
+        left:8px;
+      }
+
+      .timeline-item,
+      .timeline-item:nth-child(even){
+        width:100%;
+        left:0;
+        padding-left:35px;
+        padding-right:0;
+        text-align:left;
+      }
+
+      .timeline-item:nth-child(odd) .timeline-dot,
+      .timeline-item:nth-child(even) .timeline-dot{
+        left:0;
+        right:auto;
+      }
+
+      .gallery{
+        grid-template-columns:1fr 1fr;
+        gap:10px;
+      }
+
+      .gallery-item video{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:.6s;
+}
+
+.gallery-item:hover video{
+  transform:scale(1.1);
+      }
+
+      .gallery-item{
+        height:170px;
+      }
+
+      .gallery-item:first-child{
+        height:220px;
+      }
+
+      .footer-content{
+        flex-direction:column;
+        text-align:center;
+      }
+
+    }
+
+  </style>
+</head>
+
+<body>
+
+  <!-- ================= LOADING ================= -->
+
+  <div id="loader">
+    <div class="loader-box">
+      <div class="loader-logo"></div>
+      <p>IRMANI</p>
+      <p>ikatan remaja masjid jami nurul islam</p>
+    </div>
+  </div>
+
+
+  <!-- ================= NAVBAR ================= -->
+
+  <header id="header">
+
+    <div class="container">
+
+      <nav>
+
+        <a href="#home" class="logo">
+
+          <div class="logo-icon">
+            <img src="https://i.imgur.com/bAQcAMa.jpeg" alt="Logo IRMANI">
+          </div>
+
+          IRMANI
+
+        </a>
+
+        <div class="nav-links" id="navLinks">
+
+          <a href="#home">Beranda</a>
+          <a href="#about">Tentang</a>
+          <a href="#pengurus">Kepengurusan</a>
+          <a href="#agenda">Agenda</a>
+          <a href="#galeri">Galeri</a>
+          <a href="#berita">Berita</a>
+          <a href="#kontak">Kontak</a>
+
+        </div>
+
+        <div class="menu-btn" id="menuBtn">
+          <i class="fa-solid fa-bars"></i>
+        </div>
+
+      </nav>
+
+    </div>
+
+  </header>
+
+
+  <!-- ================= HERO ================= -->
+
+  <section class="hero" id="home">
+
+    <div class="container">
+
+      <div class="hero-content">
+
+        <div class="hero-badge">
+          <i class="fa-solid fa-mosque"></i>
+          irmani - ikatan remaja masjid jami nurul islam
+        </div>
+
+        <h1>
+          <span>IRMANI</span>
+          <br>
+          Bersama Dalam Kebaikan
+        </h1>
+
+        <p>
+          Menjadi ruang bagi generasi muda untuk belajar,
+          berdakwah, berkarya, bersosial, dan tumbuh bersama
+          dalam lingkungan Islami yang positif.
+        </p>
+
+        <div class="hero-buttons">
+
+          <a href="#about" class="btn btn-primary">
+            <i class="fa-solid fa-arrow-down"></i>
+            Tentang Kami
+          </a>
+
+          <a href="https://wa.me/6281545590902"
+             target="_blank"
+             class="btn btn-outline">
+
+            <i class="fa-brands fa-whatsapp"></i>
+            Gabung IRMANI
+
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="scroll-down">
+      Scroll
+      <i class="fa-solid fa-chevron-down"></i>
+    </div>
+
+  </section>
+
+
+  <!-- ================= ABOUT ================= -->
+
+  <section id="about">
+
+    <div class="container">
+
+      <div class="section-head reveal">
+
+        <span class="section-label">
+          Tentang Kami
+        </span>
+
+        <h2>
+          Mengenal Lebih Dekat IRMANI
+        </h2>
+
+        <p align="justify">
+          Ikatan Remaja Masjid Jami Nurul Islam (IRMANI) merupakan wadah pembinaan, pengembangan, dan pengabdian bagi para remaja dan pemuda-pemudi di lingkungan Masjid Jami Nurul Islam.
+
+IRMANI hadir sebagai ruang bagi generasi muda untuk belajar, berkarya, berorganisasi, serta berkontribusi dalam memakmurkan masjid dan memberikan manfaat bagi masyarakat sekitar. Kegiatan IRMANI diarahkan pada penguatan nilai-nilai keislaman, pembentukan akhlak, peningkatan wawasan, pengembangan potensi generasi muda, serta kepedulian sosial.
+
+Dalam menjalankan kegiatannya, IRMANI berada dalam pembinaan Ketua DKM Masjid Jami Nurul Islam, Bapak Heri Kusaeri, serta menjalin kebersamaan dengan jamaah, masyarakat, dan berbagai unsur di lingkungan Masjid Jami Nurul Islam.
+
+IRMANI diharapkan menjadi tempat tumbuhnya generasi muda yang tidak hanya aktif dalam kegiatan masjid, tetapi juga memiliki karakter yang baik, bertanggung jawab, mampu bekerja sama, dan memiliki kepedulian terhadap lingkungan serta masyarakat.
+        </p>
+
+      </div>
+
+
+      <div class="about-grid">
+
+        <div class="about-image reveal">
+
+          <img
+            src="https://i.imgur.com/bAQcAMa.jpeg"
+            alt="Kegiatan IRMANI">
+
+          
+
+        </div>
+
+
+        <div class="about-text reveal">
+
+          <h3>Apa itu IRMANI?</h3>
+
+          <p>
+            IRMANI merupakan organisasi remaja masjid yang
+            menjadi tempat berkumpulnya generasi muda untuk
+            melakukan kegiatan positif, mempererat
+            persaudaraan, serta berkontribusi bagi masyarakat.
+          </p>
+
+
+          <div class="vision-box">
+
+            <div class="vision-item">
+
+              <h4>
+                <i class="fa-solid fa-clock-rotate-left"></i>
+                Sejarah Singkat
+              </h4>
+
+              <p>
+                Keberadaan generasi muda memiliki peranan penting dalam keberlangsungan kegiatan dan kemakmuran sebuah masjid. Atas dasar semangat tersebut, para remaja dan pemuda-pemudi di sekitar Masjid Jami Nurul Islam memiliki keinginan untuk kembali membangun sebuah wadah yang dapat menjadi tempat berkumpul, belajar, berorganisasi, dan berkontribusi dalam berbagai kegiatan keislaman maupun sosial.
+
+Semangat tersebut kemudian diwujudkan dengan didirikannya kembali Ikatan Remaja Masjid Jami Nurul Islam (IRMANI) pada tanggal 13 September 2025.
+
+Momentum tersebut menjadi awal dari sebuah langkah baru bagi generasi muda di lingkungan Masjid Jami Nurul Islam. Berdirinya kembali IRMANI berlangsung pada masa kepengurusan Re DKM yang baru dan mendapatkan pembinaan dari Ketua DKM Masjid Jami Nurul Islam, Bapak Heri Kusaeri.
+
+Sejak didirikan kembali, IRMANI diisi oleh remaja dan pemuda-pemudi yang berada di sekitar Masjid Jami Nurul Islam. Mereka dipersatukan oleh semangat kebersamaan, kepedulian terhadap masjid, serta keinginan untuk menjadi bagian dari generasi muda yang aktif dan bermanfaat.
+
+Pada tahap awal perkembangannya, IRMANI menjadi wadah untuk mempererat tali silaturahmi antarremaja, membangun rasa kebersamaan, serta menumbuhkan kesadaran bahwa masjid bukan hanya tempat ibadah, tetapi juga tempat pembinaan generasi muda dan pusat kegiatan yang memberikan manfaat bagi lingkungan.
+
+Seiring berjalannya waktu, IRMANI diharapkan terus berkembang menjadi organisasi remaja masjid yang aktif, tertib, kreatif, dan mampu memberikan kontribusi nyata dalam kegiatan keagamaan, sosial, pendidikan, maupun kemasyarakatan.
+              </p>
+
+            </div>
+
+
+            <div class="vision-item">
+
+              <h4>
+                <i class="fa-solid fa-eye"></i>
+                Visi
+              </h4>
+
+              <p>
+                Menjadi wadah generasi muda Masjid Jami Nurul Islam yang beriman, berakhlak, berilmu, kreatif, solid, dan aktif dalam memakmurkan masjid serta memberikan manfaat bagi masyarakat.
+              </p>
+
+            </div>
+
+
+            <div class="vision-item">
+
+              <h4>
+                <i class="fa-solid fa-bullseye"></i>
+                Misi & Tujuan
+              </h4>
+
+              <p>
+                <b>MISI</b><br><br>
+                Meningkatkan keimanan, ketakwaan, dan akhlak para anggota IRMANI.  Menjadikan Masjid Jami Nurul Islam sebagai ruang pembinaan dan pengembangan generasi muda.
+ Membangun hubungan yang erat, harmonis, dan penuh kekeluargaan antarremaja.
+ Mendorong remaja untuk aktif dalam kegiatan keagamaan dan kemasyarakatan.
+ Mengembangkan potensi, kreativitas, keterampilan, dan kepemimpinan anggota.
+ Menumbuhkan kepedulian sosial dan semangat gotong royong.
+ Mendukung kegiatan DKM dalam upaya memakmurkan Masjid Jami Nurul Islam.
+ Menciptakan generasi muda yang bertanggung jawab serta mampu memberikan kontribusi positif bagi lingkungan.<br><br>
+                <b>TUJUAN</b><br>
+                IRMANI dibentuk dan dikembangkan dengan tujuan:<br><br>
+
+ Menjadi wadah berkumpul dan bersilaturahmi bagi remaja di lingkungan Masjid Jami Nurul Islam.<br>
+ Membentuk generasi muda yang memiliki akhlak dan karakter yang baik.
+ Meningkatkan kecintaan generasi muda terhadap masjid.<br>
+ Mendorong keterlibatan remaja dalam kegiatan keagamaan dan sosial.<br>
+ Mengembangkan kemampuan berorganisasi, kepemimpinan, dan kerja sama.<br>
+ Menyalurkan kreativitas serta potensi positif para remaja.<br>
+ Membangun kepedulian terhadap masyarakat dan lingkungan sekitar.<br>
+ Mempersiapkan generasi penerus yang mampu melanjutkan kegiatan dan kemakmuran masjid.
+              </p>
+
+            </div>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= PENGURUS ================= -->
+
+  <section class="management" id="pengurus">
+
+    <div class="container">
+
+      <div class="section-head reveal">
+
+        <span class="section-label">
+          Organisasi
+        </span>
+
+        <h2>
+          Struktur Kepengurusan
+        </h2>
+
+        <p>
+          Bersama-sama menjalankan amanah dan mengembangkan
+          kegiatan IRMANI.
+        </p>
+
+      </div>
+
+
+      <div class="management-grid">
+
+
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>Faizal Abdullah</h3>
+          <span>Ketua</span>
+
+          <p>
+            Mengkoordinasikan seluruh kegiatan organisasi.
+          </p>
+
+        </div>
+
+
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>Mahesa indra</h3>
+          <span>Wakil Ketua</span>
+
+          <p>
+            Membantu ketua dalam menjalankan program kerja.
+          </p>
+
+        </div>
+
+
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>Rafa habibie</h3>
+          <span>Sekretaris</span>
+
+          <p>
+            Mengelola administrasi dan dokumentasi organisasi.
+          </p>
+
+        </div>
+
+
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>selvia pertiwi</h3>
+          <span>Bendahara</span>
+
+          <p>
+            Mengelola keuangan dan kebutuhan organisasi.
+          </p>
+
+        </div>
+
+
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>pahri hidayat</h3>
+          <span>info kam</span>
+
+          <p>
+            -
+          </p>
+
+        </div>
+
+
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>fikri pramana</h3>
+          <span>info kam</span>
+
+          <p>
+            -
+          </p>
+
+        </div>
+
+
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>khalisah</h3>
+          <span>info kam</span>
+
+          <p>
+            -
+          </p>
+
+        </div>
+        
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>ibet</h3>
+          <span>anggota</span>
+
+          <p>
+            -
+          </p>
+
+        </div>
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>arbi</h3>
+          <span>anggota</span>
+
+          <p>
+            -
+          </p>
+
+        </div>
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>queen</h3>
+          <span>anggota</span>
+
+          <p>
+            -
+          </p>
+
+        </div>
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>azie</h3>
+          <span>anggota</span>
+
+          <p>
+            -
+          </p>
+
+        </div>
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>liyana</h3>
+          <span>anggota</span>
+
+          <p>
+            -
+          </p>
+
+        </div>
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>andra</h3>
+          <span>anggota</span>
+
+          <p>
+            -
+          </p>
+
+        </div>
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>pahri</h3>
+          <span>anggota</span>
+
+          <p>
+            -
+          </p>
+
+        </div>
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>teguh</h3>
+          <span>anggota</span>
+
+          <p>
+            -
+          </p>
+
+        </div>
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>alya</h3>
+          <span>anggota</span>
+
+          <p>
+            -
+          </p>
+
+        </div>
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>arya</h3>
+          <span>anggota</span>
+
+          <p>
+            -
+          </p>
+
+        </div>
+        
+        <div class="member-card reveal">
+
+          <i class="fa-solid fa-user"></i>
+
+          <h3>apip</h3>
+          <span>anggota</span>
+
+          <p>
+            -
+          </p>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= AGENDA ================= -->
+
+  <section id="agenda">
+
+    <div class="container">
+
+      <div class="section-head reveal">
+
+        <span class="section-label">
+          Program
+        </span>
+
+        <h2>
+          Agenda & Kegiatan
+        </h2>
+
+        <p>
+          Berbagai kegiatan yang menjadi bagian dari perjalanan
+          IRMANI dalam membangun generasi muda.
+        </p>
+
+      </div>
+
+
+      <div class="timeline">
+
+
+        <div class="timeline-item reveal">
+
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-card">
+
+            <i class="fa-solid fa-book-quran"></i>
+
+            <h3>Kajian Rutin</h3>
+
+            <p>
+              Kajian keislaman rutin untuk menambah wawasan
+              dan mempererat silaturahmi.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-card">
+
+            <i class="fa-solid fa-mosque"></i>
+
+            <h3>Pengajian</h3>
+
+            <p>
+              Kegiatan pengajian bersama jamaah dan
+              masyarakat sekitar masjid.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-card">
+
+            <i class="fa-solid fa-hand-holding-heart"></i>
+
+            <h3>Bakti Sosial</h3>
+
+            <p>
+              Berbagi dan membantu masyarakat yang membutuhkan.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-card">
+
+            <i class="fa-solid fa-gift"></i>
+
+            <h3>Santunan</h3>
+
+            <p>
+              Program kepedulian dan santunan bagi anak yatim
+              serta masyarakat sekitar.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-card">
+
+            <i class="fa-solid fa-moon"></i>
+
+            <h3>Ramadhan</h3>
+
+            <p>
+              Berbagai program spesial Ramadhan seperti
+              buka bersama, kajian, dan berbagi takjil.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-card">
+
+            <i class="fa-solid fa-star-and-crescent"></i>
+
+            <h3>Maulid Nabi</h3>
+
+            <p>
+              Memperingati Maulid Nabi Muhammad SAW
+              melalui kegiatan keagamaan dan silaturahmi.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-card">
+
+            <i class="fa-solid fa-trophy"></i>
+
+            <h3>Perlombaan Islami</h3>
+
+            <p>
+              Mengembangkan bakat dan kreativitas generasi muda
+              melalui perlombaan Islami.
+            </p>
+
+          </div>
+
+        </div>
+
+
+        <div class="timeline-item reveal">
+
+          <div class="timeline-dot"></div>
+
+          <div class="timeline-card">
+
+            <i class="fa-solid fa-people-group"></i>
+
+            <h3>Kegiatan Pemuda</h3>
+
+            <p>
+              Forum diskusi, olahraga, gathering,
+              dan kegiatan positif lainnya.
+            </p>
+
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= GALERI ================= -->
+
+  <section id="galeri" style="background:#eef8f2;">
+
+    <div class="container">
+
+      <div class="section-head reveal">
+
+        <span class="section-label">
+          Dokumentasi
+        </span>
+
+        <h2>
+          Galeri Kegiatan
+        </h2>
+
+        <p>
+          Beberapa momen kebersamaan dan kegiatan IRMANI.
+        </p>
+
+      </div>
+
+
+      <div class="gallery">
+
+
+        <div class="gallery-item reveal">
+
+          <img src="https://i.imgur.com/vu72lUh.jpeg"
+               alt="Kegiatan masjid">
+
+          <div class="gallery-overlay">
+            <strong>kebersamaan</strong>
+          </div>
+
+        </div>
+
+
+        <div class="gallery-item reveal">
+
+          <img src="https://i.imgur.com/DvP27JQ.jpeg"
+               alt="kegiatan masjid">
+
+          <div class="gallery-overlay">
+            <strong>Kajian</strong>
+          </div>
+
+        </div>
+
+
+        <div class="gallery-item reveal">
+
+          <img src="https://i.imgur.com/bNW4VBF.jpeg"
+               alt="lomba adzan">
+
+          <div class="gallery-overlay">
+            <strong>lomba adzan</strong>
+          </div>
+
+        </div>
+
+
+        <div class="gallery-item reveal">
+
+          <img src="https://i.imgur.com/DD1R1Tp.jpeg"
+               alt="Bakti sosial">
+
+          <div class="gallery-overlay">
+            <strong>Bakti Sosial</strong>
+          </div>
+
+        </div>
+
+
+        <div class="gallery-item reveal">
+
+          <img src="https://i.imgur.com/H77iDsP.jpeg"
+               alt="Kebersamaan">
+
+          <div class="gallery-overlay">
+            <strong>Kebersamaan Pemuda</strong>
+          </div>
+
+        </div>
+        
+        <div class="gallery-item reveal">
+
+          <img src="https://i.imgur.com/dvQcI7g.jpeg"
+               alt="Kebersamaan">
+
+          <div class="gallery-overlay">
+            <strong>Kebersamaan Pemuda</strong>
+          </div>
+
+        </div>
+        
+        <div class="gallery-item reveal">
+
+          <img src="https://i.imgur.com/94pZjox.jpeg"
+               alt="Kebersamaan">
+
+          <div class="gallery-overlay">
+            <strong>tim hadroh</strong>
+          </div>
+
+        </div>
+
+        <div class="gallery-item reveal">
+
+          <img src="https://i.imgur.com/FB4R5gN.jpeg"
+               alt="Kebersamaan">
+
+          <div class="gallery-overlay">
+            <strong>kebersamaan</strong>
+          </div>
+
+        </div>
+        
+        <div class="gallery-item reveal">
+
+          <img src="https://i.imgur.com/mHECHqm.jpeg"
+               alt="Kebersamaan">
+
+          <div class="gallery-overlay">
+            <strong>kebersamaan</strong>
+          </div>
+
+        </div>
+
+        <div class="gallery-item reveal">
+
+  <video
+    src="Vid_irmani.mp4"
+    muted
+    autoplay
+    loop
+    playsinline>
+  </video>
+
+  <div class="gallery-overlay">
+    <strong>
+      <i class="fa-solid fa-play"></i>
+      Dokumentasi Kegiatan
+    </strong>
+  </div>
+
+        </div>
+
+        <div class="gallery-item reveal">
+
+          <img src="https://i.imgur.com/r0RRRKs.jpeg"
+               alt="Kebersamaan">
+
+          <div class="gallery-overlay">
+            <strong>kebersamaan</strong>
+          </div>
+
+        </div>
+        
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= BERITA ================= -->
+
+  <section id="berita">
+
+    <div class="container">
+
+      <div class="section-head reveal">
+
+        <span class="section-label">
+          Informasi
+        </span>
+
+        <h2>
+          Berita & Artikel
+        </h2>
+
+        <p>
+          Informasi kegiatan, artikel Islami, pengumuman,
+          dan dokumentasi terbaru IRMANI.
+        </p>
+
+      </div>
+
+
+      <div class="article-grid">
+
+
+        <article class="article-card reveal">
+
+          <div class="article-image">
+
+            <img
+              src="https://i.imgur.com/remHF7g.jpeg"
+              alt="Berita kegiatan">
+
+          </div>
+
+          <div class="article-content">
+
+            <span class="article-tag">
+              BERITA KEGIATAN
+            </span>
+
+            <h3>
+              Keseruan Kegiatan Bersama IRMANI
+            </h3>
+
+            <p>
+              Dokumentasi kegiatan dan kebersamaan anggota
+              IRMANI dalam menjalankan program organisasi.
+            </p>
+
+            <a href="#" class="read-more">
+              
+              <i class="fa-solid fa-mosque"></i>
+            </a>
+
+          </div>
+
+        </article>
+
+
+        <article class="article-card reveal">
+
+          <div class="article-image">
+
+            <img
+              src="https://i.imgur.com/H77iDsP.jpeg"
+              alt="Artikel Islami">
+
+          </div>
+
+          <div class="article-content">
+
+            <span class="article-tag">
+              ARTIKEL ISLAMI
+            </span>
+
+            <h3>
+              Menjadi Pemuda yang Bermanfaat
+            </h3>
+
+            <p>
+              Inspirasi untuk generasi muda agar terus
+              berkembang dan memberikan manfaat.
+            </p>
+
+            <a href="#" class="read-more">
+              <i class="fa-solid fa-mosque"></i>
+            </a>
+
+          </div>
+
+        </article>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= CONTACT ================= -->
+
+  <section class="contact" id="kontak">
+
+    <div class="container">
+
+      <div class="section-head reveal">
+
+        <span class="section-label">
+          Hubungi Kami
+        </span>
+
+        <h2>
+          Mari Terhubung Dengan IRMANI
+        </h2>
+
+        <p>
+          Ingin bergabung, bekerja sama, atau mendapatkan
+          informasi kegiatan? Hubungi kami melalui kontak berikut.
+        </p>
+
+      </div>
+
+
+      <div class="contact-grid">
+
+
+        <div class="contact-box reveal">
+
+
+          <a href="https://wa.me/6281545590902"
+             target="_blank"
+             class="contact-item">
+
+            <div class="contact-icon">
+              <i class="fa-brands fa-whatsapp"></i>
+            </div>
+
+            <div>
+
+              <small>WHATSAPP</small>
+
+              <strong>
+                klik here
+              </strong>
+
+            </div>
+
+          </a>
+
+
+          <a href="https://www.instagram.com/irmani_jaminurul.islam?stkn=MWFpbDJtN3dvMnVyZw=="
+             target="_blank"
+             class="contact-item">
+
+            <div class="contact-icon">
+              <i class="fa-brands fa-instagram"></i>
+            </div>
+
+            <div>
+
+              <small>INSTAGRAM</small>
+
+              <strong>
+                klik here
+              </strong>
+
+            </div>
+
+          </a>
+
+
+          <a href="https://tiktok.com/@irmani1309"
+             target="_blank"
+             class="contact-item">
+
+            <div class="contact-icon">
+              <i class="fa-brands fa-tiktok"></i>
+            </div>
+
+            <div>
+
+              <small>TIKTOK</small>
+
+              <strong>
+                klik here
+              </strong>
+
+            </div>
+
+          </a>
+
+
+          <a href="https://youtube.com/@irmani-21?si=2g_MNi_52Z7CpfaG"
+             target="_blank"
+             class="contact-item">
+
+            <div class="contact-icon">
+              <i class="fa-brands fa-youtube"></i>
+            </div>
+
+            <div>
+
+              <small>YOUTUBE</small>
+
+              <strong>
+                klik here
+              </strong>
+
+            </div>
+
+          </a>
+
+
+          <div class="contact-item">
+
+            <div class="contact-icon">
+              <i class="fa-solid fa-location-dot"></i>
+            </div>
+
+            <div>
+
+              <small>ALAMAT MASJID</small>
+
+              <strong>
+                Masjid jami nurul islam, kapuk gg.empang
+              </strong>
+
+            </div>
+
+          </div>
+
+
+        </div>
+
+
+        <div class="map-box reveal">
+
+          <iframe src="https://www.google.com/maps/embed?pb=!4v1790324200505!6m8!1m7!1stCwuqM0nKuvdpkDIMLVgNQ!2m2!1d-6.133465097195999!2d106.7478119240522!3f262.16!4f-11.790000000000006!5f0.7820865974627469" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+
+        </div>
+
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ================= FOOTER ================= -->
+
+  <footer>
+
+    <div class="container">
+
+      <div class="footer-content">
+
+        <div>
+
+          <div class="footer-logo">
+            IRMANI
+          </div>
+
+          <small>
+            Bersama dalam kebaikan.
+          </small>
+
+        </div>
+
+
+        <div class="socials">
+
+          <a href="https://www.instagram.com/irmani_jaminurul.islam?stkn=MWFpbDJtN3dvMnVyZw=="
+             target="_blank">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+
+          <a href="https://tiktok.com/@irmani1309"
+             target="_blank">
+            <i class="fa-brands fa-tiktok"></i>
+          </a>
+
+          <a href="https://youtube.com/@irmani-21?si=2g_MNi_52Z7CpfaG"
+             target="_blank">
+            <i class="fa-brands fa-youtube"></i>
+          </a>
+
+          <a href="https://wa.me/6281545590902"
+             target="_blank">
+            <i class="fa-brands fa-whatsapp"></i>
+          </a>
+
+        </div>
+
+      </div>
+
+      <div style="text-align:center;margin-top:25px;font-size:12px;opacity:.7;">
+        © 2026 IRMANI. Semua hak cipta dilindungi.
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script>
+
+    /* ================= LOADER ================= */
+
+    window.addEventListener("load", () => {
+
+      setTimeout(() => {
+
+        document.getElementById("loader").style.opacity = "0";
+
+        setTimeout(() => {
+          document.getElementById("loader").style.display = "none";
+        },700);
+
+      },700);
+
+    });
+
+
+    /* ================= NAVBAR ================= */
+
+    const header = document.getElementById("header");
+
+    window.addEventListener("scroll", () => {
+
+      if(window.scrollY > 50){
+        header.classList.add("scrolled");
+      }else{
+        header.classList.remove("scrolled");
+      }
+
+    });
+
+
+    /* ================= MOBILE MENU ================= */
+
+    const menuBtn = document.getElementById("menuBtn");
+    const navLinks = document.getElementById("navLinks");
+
+    menuBtn.addEventListener("click", () => {
+
+      navLinks.classList.toggle("show");
+
+      const icon = menuBtn.querySelector("i");
+
+      if(navLinks.classList.contains("show")){
+
+        icon.classList.remove("fa-bars");
+        icon.classList.add("fa-xmark");
+
+      }else{
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+      }
+
+    });
+
+
+    /* CLOSE MENU AFTER CLICK */
+
+    document.querySelectorAll(".nav-links a").forEach(link => {
+
+      link.addEventListener("click", () => {
+
+        navLinks.classList.remove("show");
+
+        const icon = menuBtn.querySelector("i");
+
+        icon.classList.remove("fa-xmark");
+        icon.classList.add("fa-bars");
+
+      });
+
+    });
+
+
+    /* ================= SCROLL REVEAL ================= */
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    function revealOnScroll(){
+
+      reveals.forEach(element => {
+
+        const windowHeight = window.innerHeight;
+
+        const elementTop =
+          element.getBoundingClientRect().top;
+
+        if(elementTop < windowHeight - 80){
+
+          element.classList.add("active");
+
+        }
+
+      });
+
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+
+    revealOnScroll();
+
+
+  </script>
+
+</body>
+</html>
